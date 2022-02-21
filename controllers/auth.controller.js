@@ -21,7 +21,8 @@ const createUser = async(req,res = response)=>{
         const dbUser = new User( req.body );
     
         //Hashing password
-    
+        const salt = bcrypt.genSaltSync();
+        dbUser.password = bcrypt.hashSync(password, salt);
         //Generate JWT
     
         //Create user of db
