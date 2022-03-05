@@ -56,6 +56,7 @@ const loginUser = (req, res = response) => {
       msg: "Please talk with your admin",
     });
   }
+  
 };
 
 const renewToken = (req, res = response) => {
